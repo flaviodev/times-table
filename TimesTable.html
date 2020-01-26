@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/Multiplication.js"></script>
+    <script src="js/Training.js"></script>
+    <script src="js/TimesTableController.js"></script>
+  </head>
+
+  <body>
+    <div id ='tables'>
+      <div>
+        <h3>Escolha as tabuadas:</h3>
+        <input type="checkbox" id="2" onchange="verifyTables()"> Tabuada do 2<br>
+        <input type="checkbox" id="3" onchange="verifyTables()"> Tabuada do 3<br>
+        <input type="checkbox" id="4" onchange="verifyTables()"> Tabuada do 4<br>
+        <input type="checkbox" id="5" onchange="verifyTables()"> Tabuada do 5<br>
+        <input type="checkbox" id="6" onchange="verifyTables()"> Tabuada do 6<br>
+        <input type="checkbox" id="7" onchange="verifyTables()"> Tabuada do 7<br>
+        <input type="checkbox" id="8" onchange="verifyTables()"> Tabuada do 8<br>
+        <input type="checkbox" id="9" onchange="verifyTables()"> Tabuada do 9<br>
+      </div>
+
+      <div>
+        <button type="button" id="btTrain" onclick="startTraining()" disabled>Treinar</button>
+      </div>
+    </div>
+
+    <div id ='operationPane' style="display: none;">
+      <div>Tempo para resposta: <span id="seconds"></span> segundos</div>
+
+      <p style="font-size: 50px;">
+        <span id="operation"></span> <input style="font-size: 50px;" type="text" id="enteredAnswer" onkeypress="verifyPressedKey(event)"></input>  
+        <input type="button" id="btCheckAnswer" onclick="checkAnswer()" value="Verificar">
+      </p>
+    </div>
+
+    <div id="result" style="display: none;">
+      <h3>Resultado</h3>
+      <p>Certas: <span id="correctTotal">0</span></p> 
+      <p>Erradas: <span id="wrongTotal">0</span></p>
+      <p>Total: <span id="total">0</span></p>
+      <p>Tempo Médio por Resposta: <span id="avarageTime">0</span> segundos. </p>
+      <p>Pontuação: <span id="score">0</span></p>
+      <p id='wrongPanel' style='font-size: 20px;border-style: solid;'>Erradas</p>
+      <p id='correctPanel' style='font-size: 20px;border-style: solid;'>Certas</p>
+    </div>
+  </body>
+</html>
